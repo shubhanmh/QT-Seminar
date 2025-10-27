@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Wave Text</title>
+  <link href="examples.html">
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wave-text {
+      font-size: 10pc;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      gap: 5px;
+    }
+
+    .wave-text span {
+      display: inline-block;
+      animation: wave 1.5s ease-in-out infinite;
+      text-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff;
+    }
+
+    /* Wave movement */
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-15px);
+        opacity: 0.8;
+        text-shadow: 0 0 40px cyan, 0 0 60px blueviolet, 0 0 80px blue;
+      }
+    }
+
+    /* Delay each letter to create wave pattern */
+    .wave-text span:nth-child(1) { animation-delay: 0s; }
+    .wave-text span:nth-child(2) { animation-delay: 0.1s; }
+    .wave-text span:nth-child(3) { animation-delay: 0.2s; }
+    .wave-text span:nth-child(4) { animation-delay: 0.3s; }
+    .wave-text span:nth-child(5) { animation-delay: 0.4s; }
+    .wave-text span:nth-child(6) { animation-delay: 0.5s; }
+    .wave-text span:nth-child(7) { animation-delay: 0.6s; }
+    .wave-text span:nth-child(8) { animation-delay: 0.7s; }
+    .wave-text span:nth-child(9) { animation-delay: 0.8s; }
+    .wave-text span:nth-child(10) { animation-delay: 0.9s; }
+  </style>
+</head>
+<body>
+  <div class="wave-text">
+    <span>T</span><span>H</span><span>A</span><span>N</span><span>K</span>
+    <span>&nbsp;</span>
+    <span>Y</span><span>O</span><span>U</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QT Seminar</title>
+        <link href="importance.html">
+        <link href="examples.html ">
+    </head>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        .head h1{
+            color:white;
+            font-size: 60px;
+            text-align: center;
+            padding: 5px;
+            border: 5px solid;
+            border-color: cyan;
+            background-color: rgb(6, 60, 60);
+        }
+        .content .points{
+            color: white;
+            font-size: 38px;
+
+        }
+        .change .next{
+    transform: translate(60pc,20px);
+    width: 8%;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(84, 84, 84);
+    border-color: rgb(20, 244, 12);
+    border-radius: 15px;
+}
+ .change .next:hover{
+    animation: glow-next 1s infinite alternate
+   }
+   @keyframes glow-next {
+  from { box-shadow: 0 0 5px rgb(59, 245, 3), 0 0 10px rgb(80, 255, 5); }
+  to { box-shadow: 0 0 20px rgb(14, 255, 1), 0 0 40px rgb(4, 255, 0); }
+}
+.change .previous{
+    transform: translate(5pc,20px);
+    width: 8%;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(84, 84, 84);
+    border-color: rgb(250, 6, 6);
+    border-radius: 15px;
+}
+ .change .previous:hover{
+    animation: glow-previous 1s infinite alternate
+   }
+   @keyframes glow-previous {
+  from { box-shadow: 0 0 5px rgb(245, 31, 3), 0 0 10px rgb(255, 0, 0); }
+  to { box-shadow: 0 0 20px rgb(255, 1, 1), 0 0 40px rgb(255, 0, 0); }
+}
+    </style>
+    <body>
+        <div class="head">
+            <h1>Types of Teaching Aids</h1>
+        </div>
+        <div class="content">
+            <ul class=" points">
+                <li>Audio Aids</li>
+                <li>Visual Aids</li> 
+                <li>Audio-Visual Aids</li>  
+                <li>Telling Method</li> 
+                <li>Project Method</li>
+                <li>Visual Method</li>
+                <li>Mental Method</li>
+            </ul>
+        </div>
+        <div class="change">
+            <button class="previous" onclick="window.location.href='http://127.0.0.1:5500/importance.html'">Previous</button>
+             <button class="next" onclick="window.location.href='http://127.0.0.1:5500/examples.html'">Next</button>
+        </div>
+    </body>
+</html>

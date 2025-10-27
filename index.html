@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QT Seminar</title>
+  <link href="what.html">
+  <style>  
+  body{
+    background-color: black;
+  }
+  .head h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+  }
+  .container img{
+    transform: translateX(370px);
+    height: 15pc;
+    border: 10px solid;
+    border-color: rgb(97, 237, 10);
+    border-radius: 15px;
+  }
+  .topic {
+    transform: translate(50px,50px);
+   }
+   .topic button{
+    width:15%;
+    height: 45px;
+    font-size: 30px;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    border-color:cyan ;
+    border-radius:20px ;
+   }
+   .topic button{
+    animation: glow 1s infinite alternate
+   }
+   @keyframes glow {
+  from { box-shadow: 0 0 5px rgb(252, 1, 1), 0 0 10px rgb(255, 255, 4); }
+  to { box-shadow: 0 0 20px rgb(14, 255, 1), 0 0 40px rgb(0, 251, 255); }
+}
+#points{
+    color:white;
+  display: none;
+  font-size: 35px;
+}
+.change .next{
+    transform: translate(70pc);
+    width: 8%;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(84, 84, 84);
+    border-color: rgb(20, 244, 12);
+    border-radius: 15px;
+}
+ .change .next:hover{
+    animation: glow-next 1s infinite alternate
+   }
+   @keyframes glow-next {
+  from { box-shadow: 0 0 5px rgb(59, 245, 3), 0 0 10px rgb(80, 255, 5); }
+  to { box-shadow: 0 0 20px rgb(14, 255, 1), 0 0 40px rgb(4, 255, 0); }
+}
+  </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Teaching Aids</h1>
+    </div>
+    <div class="container">
+        <img src="img/download (8).jpg">
+    </div>
+    <div class="topic">
+        <button class="topics" onclick="toggleList()">Topics</button>
+        <ul id="points">
+            <li>What are Teaching Aids</li>
+            <li>Objectives of Teaching Aids</li>
+            <li>Importance of Teaching Aids</li>
+            <li>Types of Teaching Aids</li>
+            <li>Examples of Teaching aids</li> 
+        </ul>
+    </div><br><br><br><br>
+    <div class="change">
+        <button class="next" onclick="window.location.href='http://127.0.0.1:5500/what.html'">Next</button>
+
+    </div>
+</body>
+<script>
+ function toggleList() {
+  const list = document.getElementById("points");
+  // Toggle display on click
+  if (list.style.display === "none" || list.style.display === "") {
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
+}
+</script>
+</html>
